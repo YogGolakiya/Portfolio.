@@ -79,7 +79,7 @@ export default function Hero() {
         <a href="https://github.com/YogGolakiya" className="hover:text-blue-400 transition" target="_blank" rel="noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/yog-golakiya-456b26238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-blue-400 transition" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=golakiyayog@gmail.com" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition"><FaEnvelope /></a>
-        <a href="\public\projects\CV-Yog Golakiya.pdf" className="hover:text-blue-400 transition" download><FaDownload /></a>
+        <a href="/projects/CV-Yog Golakiya.pdf" className="hover:text-blue-400 transition" download><FaDownload /></a>
       </motion.div>
     </section>
   );
