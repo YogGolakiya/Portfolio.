@@ -35,7 +35,7 @@ const allTechnologies = [
   { name: "Angular.js", icon: <SiAngular />, level: "Intermediate", group: "Frontend" },
   { name: "AWS", icon: <FaAws />, level: "Beginner", group: "Cloud & DevOps" },
   { name: "Git", icon: <SiGit />, level: "Intermediate", group: "Cloud & DevOps" },
-  { name: "OpenAI / ChatGPT", icon: <SiOpenai />, level: "Expert", group: "AI & Integration" },
+  { name: "ChatGPT",  icon: <SiOpenai />, level: "Expert", group: "AI & Integration" },
   { name: "Stripe", icon: <SiStripe />, level: "Intermediate", group: "AI & Integration" },
 ];
 
