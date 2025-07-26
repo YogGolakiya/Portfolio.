@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,10 +16,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_pbw4dau",              
-        "template_2h1qanj",             
+        "service_pbw4dau",
+        "template_2h1qanj",
         formRef.current,
-        "FB_BBxMZwyv9PFJ1A"             
+        "FB_BBxMZwyv9PFJ1A"
       )
       .then(
         () => {
@@ -40,7 +39,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black via-gray-900 to-black text-white px-6 py-20 font-poppins overflow-hidden">
+    <section
+      id="contact"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center text-white px-6 py-20 font-poppins overflow-hidden"
+    >
       {/* Loader Overlay */}
       <AnimatePresence>
         {loading && (
@@ -50,11 +52,7 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div
-              className="flex space-x-2"
-              initial={{}}
-              animate={{}}
-            >
+            <motion.div className="flex space-x-2">
               <span className="h-3 w-3 bg-white rounded-full animate-bounce [animation-delay:-0.3s]"></span>
               <span className="h-3 w-3 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></span>
               <span className="h-3 w-3 bg-white rounded-full animate-bounce"></span>
@@ -69,34 +67,34 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Contact Me
+        Let’s Connect
       </motion.h2>
 
       <form
         ref={formRef}
         onSubmit={sendEmail}
-        className="max-w-2xl mx-auto space-y-6 bg-gray-900 p-8 rounded-xl shadow-lg"
+        className="max-w-2xl mx-auto space-y-6 bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-xl shadow-xl w-full"
       >
         <input
           type="text"
           name="user_name"
           placeholder="Your Name"
           required
-          className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+          className="w-full p-3 rounded bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
         />
         <input
           type="email"
           name="user_email"
           placeholder="Your Email"
           required
-          className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+          className="w-full p-3 rounded bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
         />
         <textarea
           name="message"
           placeholder="Your Message"
           rows="6"
           required
-          className="w-full p-3 rounded bg-gray-800 text-white placeholder-gray-400"
+          className="w-full p-3 rounded bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
         ></textarea>
 
         <motion.button

@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import { useSpring, animated } from "@react-spring/web";
 import Tilt from "react-parallax-tilt";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
@@ -33,9 +32,10 @@ export default function Projects() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="projects" className="min-h-screen bg-black text-white px-6 py-20 flex flex-col font-poppins items-center">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="min-h-screen font-poppins text-white px-6 py-20 flex flex-col items-center">
+      <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-4xl font-bold text-center mb-12">My Work</h2>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => {
             const fadeUp = useSpring({
@@ -48,12 +48,12 @@ export default function Projects() {
               <animated.div style={fadeUp} key={project.title}>
                 <Tilt
                   glareEnable={true}
-                  glareMaxOpacity={0.1}
+                  glareMaxOpacity={0.15}
                   scale={1.05}
                   transitionSpeed={2000}
-                  tiltMaxAngleX={8}
-                  tiltMaxAngleY={8}
-                  className="bg-[#1a1a1a] rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300"
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl shadow-xl border border-white/10 overflow-hidden hover:shadow-2xl transition duration-300"
                 >
                   <img
                     src={project.image}
@@ -62,24 +62,22 @@ export default function Projects() {
                     className="w-full h-48 object-cover cursor-pointer hover:opacity-90"
                   />
                   <div className="p-5">
-                    <h3 className="text-xl font-semibold mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {project.description}
-                    </p>
+                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     <div className="flex gap-4">
                       <a
                         href={project.live}
                         target="_blank"
-                        className="text-sm flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-500"
+                        rel="noreferrer"
+                        className="text-sm flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-500 transition"
                       >
                         Live <FaExternalLinkAlt size={12} />
                       </a>
                       <a
                         href={project.github}
                         target="_blank"
-                        className="text-sm flex items-center gap-1 px-3 py-1 border border-gray-500 text-gray-300 rounded hover:text-white hover:border-white"
+                        rel="noreferrer"
+                        className="text-sm flex items-center gap-1 px-3 py-1 border border-gray-500 text-gray-300 rounded hover:text-white hover:border-white transition"
                       >
                         Code <FaGithub size={14} />
                       </a>
@@ -92,12 +90,17 @@ export default function Projects() {
         </div>
       </div>
 
-      <Dialog open={!!selectedImage} onClose={() => setSelectedImage(null)} className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+      {/* Light Glass Blur Image Modal */}
+      <Dialog
+        open={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md"
+      >
         <Dialog.Panel className="max-w-3xl w-full mx-4">
           <img
             src={selectedImage}
             alt="Project Preview"
-            className="w-full h-auto rounded-lg shadow-lg border border-gray-600"
+            className="w-full h-auto rounded-lg shadow-xl border border-white/20"
           />
         </Dialog.Panel>
       </Dialog>

@@ -1,7 +1,6 @@
-// src/components/Technologies.jsx
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import clickSound from "../assets/click.wav"; // 👈 Add a hover sound
+import clickSound from "../assets/click.wav";
 import {
   FaReact,
   FaNodeJs,
@@ -35,7 +34,7 @@ const allTechnologies = [
   { name: "Angular.js", icon: <SiAngular />, level: "Intermediate", group: "Frontend" },
   { name: "AWS", icon: <FaAws />, level: "Beginner", group: "Cloud & DevOps" },
   { name: "Git", icon: <SiGit />, level: "Intermediate", group: "Cloud & DevOps" },
-  { name: "ChatGPT",  icon: <SiOpenai />, level: "Expert", group: "AI & Integration" },
+  { name: "ChatGPT", icon: <SiOpenai />, level: "Expert", group: "AI & Integration" },
   { name: "Stripe", icon: <SiStripe />, level: "Intermediate", group: "AI & Integration" },
 ];
 
@@ -68,7 +67,7 @@ export default function Technologies() {
   return (
     <section
       id="technologies"
-      className="min-h-screen bg-black font-poppins text-white px-6 py-20 flex flex-col items-center"
+      className="min-h-screen font-poppins text-white px-6 py-20 flex flex-col items-center"
     >
       <motion.div
         className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
@@ -131,7 +130,7 @@ export default function Technologies() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="relative group flex flex-col items-center justify-center border border-gray-700 rounded-xl p-4 w-full max-w-[200px] bg-gray-900 hover:bg-gray-800 transition"
+              className="relative group flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-4 w-full max-w-[200px] hover:bg-white/20 transition"
             >
               <motion.div
                 className="text-4xl mb-2"

@@ -13,8 +13,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black via-gray-900 to-black text-white px-6 py-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center text-white px-6 py-20 overflow-hidden"
     >
+      {/* ✨ Transparent Particles */}
       <Particles
         className="absolute inset-0 -z-10"
         id="tsparticles"
@@ -42,7 +43,7 @@ export default function Hero() {
       />
 
       <motion.h1
-        className="text-4xl md:text-6xl font-extrabold font-poppins mb-6 text-white"
+        className="text-4xl md:text-6xl font-extrabold font-poppins mb-6"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -51,7 +52,7 @@ export default function Hero() {
       </motion.h1>
 
       <motion.div
-        className="text-xl md:text-2xl text-gray-500 font-medium font-poppins mb-10"
+        className="text-xl md:text-2xl text-gray-400 font-medium font-poppins mb-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}

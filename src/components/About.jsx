@@ -17,9 +17,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black text-white px-6 py-20 flex flex-col items-center"
+      className="min-h-screen text-white px-6 py-20 flex flex-col items-center"
     >
       <h2 className="text-4xl font-bold font-poppins text-center mb-10">About Me</h2>
+
       <p className="max-w-3xl text-lg font-poppins text-center mb-12">
         I'm a passionate full stack developer with strong experience in both frontend and backend technologies. I specialize in building modern, scalable, and performant web applications using React.js for interactive UIs and Node.js for robust backend APIs. My enthusiasm for programming drives me to continuously learn and improve while crafting smooth, user-centric web experiences.
       </p>
@@ -30,7 +31,7 @@ export default function About() {
           {coreTechnologies.map((tech, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center justify-center border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition"
+              className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-4 hover:bg-white/20 transition"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -47,7 +48,7 @@ export default function About() {
         <h3 className="text-2xl font-semibold font-poppins mb-4">Experience</h3>
 
         <motion.div
-          className="max-w-3xl mx-auto bg-gray-900 rounded-xl p-6 border border-gray-700 text-left shadow-md shadow-blue-500/10"
+          className="max-w-3xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10 text-left shadow-md shadow-blue-500/10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -57,10 +58,10 @@ export default function About() {
             <FaBriefcase className="text-blue-400 text-xl" />
             <div>
               <h4 className="text-lg font-semibold">Trainee Internship (Full Stack Developer)</h4>
-              <p className="text-sm text-gray-400">Goyani Technologies &middot; May 2023 - April 2024</p>
+              <p className="text-sm text-gray-300">Goyani Technologies &middot; May 2023 - April 2024</p>
             </div>
           </div>
-          <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
+          <ul className="list-disc list-inside space-y-2 text-sm text-gray-200">
             <li><strong>Front-End Development:</strong> Created user interfaces with HTML, CSS, and JavaScript, developed responsive web pages with React.</li>
             <li><strong>Back-End Development:</strong> Used Node.js and Express.js for server-side logic, managed API integrations and data for web applications.</li>
             <li><strong>Database Management:</strong> Utilized MongoDB for designing and maintaining efficient databases for multiple projects.</li>
@@ -69,7 +70,7 @@ export default function About() {
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto">
           <motion.div
-            className="bg-gray-900 p-4 rounded-lg border border-gray-700 flex flex-col items-center text-center shadow-sm hover:shadow-blue-400/30 transition"
+            className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/10 flex flex-col items-center text-center shadow-sm hover:shadow-blue-400/30 transition"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -80,7 +81,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="bg-gray-900 p-4 rounded-lg border border-gray-700 flex flex-col items-center text-center shadow-sm hover:shadow-red-400/30 transition"
+            className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/10 flex flex-col items-center text-center shadow-sm hover:shadow-red-400/30 transition"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -91,7 +92,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="bg-gray-900 p-4 rounded-lg border border-gray-700 flex flex-col items-center text-center shadow-sm hover:shadow-green-400/30 transition"
+            className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/10 flex flex-col items-center text-center shadow-sm hover:shadow-green-400/30 transition"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -99,7 +100,7 @@ export default function About() {
           >
             <FaUserCheck className="text-green-400 text-xl mb-2" />
             <p className="text-sm font-medium">Open to Hire</p>
-            <p className="text-xs text-gray-400">Relocation & Remote Friendly</p>
+            <p className="text-xs text-gray-300">Relocation & Remote Friendly</p>
           </motion.div>
         </div>
       </div>
